@@ -16,9 +16,19 @@ body {
 }
 
 .flag {
-  width: 200px;
+  width: 300px;
   margin-bottom: 20px;
+  animation: wave 2s infinite linear;
 }
+
+@keyframes wave {
+  0% { transform: perspective(400px) rotateY(0deg); }
+  25% { transform: perspective(400px) rotateY(5deg); }
+  50% { transform: perspective(400px) rotateY(0deg); }
+  75% { transform: perspective(400px) rotateY(-5deg); }
+  100% { transform: perspective(400px) rotateY(0deg); }
+}
+
 
 h1 {
   font-size: 2.5rem;

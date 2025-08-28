@@ -16,18 +16,13 @@ body {
 }
 
 .flag {
-  width: 300px;
+  width: 300px;              /* можешь поменять размер по желанию */
   margin-bottom: 20px;
-  animation: wave 2s infinite linear;
+  transform-origin: left center;  /* флаг «крепится» слева */
+  animation: wave 2.4s infinite ease-in-out;  /* анимация колыхания */
+  will-change: transform;
 }
 
-@keyframes wave {
-  0% { transform: perspective(400px) rotateY(0deg); }
-  25% { transform: perspective(400px) rotateY(5deg); }
-  50% { transform: perspective(400px) rotateY(0deg); }
-  75% { transform: perspective(400px) rotateY(-5deg); }
-  100% { transform: perspective(400px) rotateY(0deg); }
-}
 
 
 h1 {
@@ -49,3 +44,11 @@ p {
   height: 100%;
   z-index: 1;
 }
+@keyframes wave {
+  0%   { transform: perspective(600px) rotateY(0deg)   }
+  25%  { transform: perspective(600px) rotateY(7deg)   }
+  50%  { transform: perspective(600px) rotateY(0deg)   }
+  75%  { transform: perspective(600px) rotateY(-7deg)  }
+  100% { transform: perspective(600px) rotateY(0deg)   }
+}
+
